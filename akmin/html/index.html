@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Kiwi+Maru:wght@300;400;500&display=swap">
+        </head>
+
+<body>
+    <header>
+        <!--スマートフォン-->
+        <nav class="menu">
+            <div class="logo">
+                <a href=""><img src="../img/logo.png" alt=""></a>
+            </div>
+            <div class="menu-contents">
+                <div class="menu-inner">
+                    <ul>
+                        <li class="menu__item"><a href="#about_me">ABOUT ME</a></li>
+                        <li class="menu__item"><a href="#work">WORK</a></li>
+                        <li class="menu__item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="menu__item"><a href="#my_skill_set">My Skill Set</a></li>
+                        <li class="menu__item"><a href="#profile">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="menu-toggle_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <!--pc-->
+        <nav class="pc">
+            <div class="pc-inner">
+                <div class="pc-logo">
+                    <a href=""><img src="../img/logo.png" alt=""></a>
+                </div>
+                <ul class="pc-list">
+                    <li class="pc-list__item"><a href="#about_me">ABOUT ME</a></li>
+                    <li class="pc-list__item"><a href="#work">WORK</a></li>
+                    <li class="pc-list__item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="pc-list__item"><a href="#my_skill_set">My Skill Set</a></li>
+                    <li class="pc-list__item"><a href="#profile">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-inner">
+            <section class="opening_section">
+                <div class="opening_section_text">
+                    <div class="opening_section_message">
+                        <p>WELCOME !</p><br>
+                        <p>IZAWA Portfolio</p>
+                    </div>
+                </div>
+                <div class="nintendo-switch">
+                    <aside class="actions left">
+                        <i class="minus">-</i>
+                        <div class="analogic">
+                            <div class="center-circle"></div>
+                        </div>
+                        <div class="buttons">
+
+                            <button></button>
+                            <button id="top"></button>
+                            <button><img src="../img/finger.png" alt=""></button>
+                            <button class="under_button" id="bottom"></button>
+                        </div>
+                        <div class="square"></div>
+                    </aside>
+                    <label class="middle" for="screen">
+                        <div class="screen">
+                            <div class="glass"></div>
+                            <span>
+                                <div class="game-start-screen">
+                                    <ul id="game_button">
+                                        <li data-list="1"><a href="#about_me">ABOUT ME</a></li>
+                                        <li data-list="2"><a href="#work">WORK</a></li>
+                                        <li data-list="3"><a href="#portfolio">Portfolio</a></li>
+                                        <li data-list="4"><a href="#my_skill_set">My Skill Set</a></li>
+                                        <li data-list="5"><a href="#profile">Profile</a></li>
+                                    </ul>
+                                    <div class="game-start-screen__img">
+                                        <img src="../img/my_face.jpg" alt="">
+                                    </div>
+                                </div>
+                            </span>
+
+                        </div>
+                    </label>
+
+                    <aside class="actions right">
+                        <i class="plus">+</i>
+                        <div class="analogic">
+                            <div class="center-circle"></div>
+                        </div>
+                        <div class="buttons-right">
+                            <button id="decision">A</button>
+                        </div>
+                        <div class="circle"></div>
+                    </aside>
+
+                </div>
+            </section>
+            <section class="about_section" id="about_section">
+                <div class="about_section_detail effect-fade">
+                    <h2>About this site</h2>
+                    <p>このサイトは、システムエンジニアのIZAWAのポートフォリオサイトになります。
+                        これまでに手がけた制作物、身につけたスキルをまとめています。
+                        皆様に、私のことを深く知ってほしいと思い心をこめて作りました。
+                        どうぞお茶でも飲みながらごゆるりとサイト内を散策してください。</p>
+                </div>
+            </section>
+            <section class="about_me_section" id="about_me">
+                <div class="about_me_section_detail effect-fade">
+                    <h2>About Me !</h2>
+                    <div class="about_me_section_detail__flex">
+                        <div class="about_me_section_detail__img">
+                            <img src="../img/my_face.jpg" alt="">
+                        </div>
+                        <div class="about_me_section_detail__message">
+                            茨城県出身のエンジニア！薬学部の研究でlinuxのコマンドやアプリを使用して行くうちに、自分もこんなものを作って何かの研究に役に立ちたいと思い、IT業界へ、転職！
+                            テスターからキャリアをスタートし、WEBページの作成やwebシステム等の業務を経験しました!
+                            <!--<ul>
+                                <li>BLOG:<a href="">あんぽんたんの技術ブログ</a></li>
+                                <li>GitHub:<a href="">aaa</a></li>
+                            </ul>-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="work_section" id="work">
+                <div class="work_section_detail">
+                    <h2 class="effect-fade">WORK</h2>
+                    <div class="work_section_detail__flex effect-fade">
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="1"><img src="../img/new_ja_search_top.png"
+                                    alt=""><br><span>HPの保守運用</span></a>
+                        </div>
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="2"><img src="../img/new_ja_contact.png"
+                                    alt=""><br><span>HPの保守運用</span></a>
+                        </div>
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="3"><img src="../img/akros.png"
+                                    alt=""><br><span>生徒管理システム</span></a>
+                        </div>
+                    </div>
+                    <div id="overlay" class="overlay"></div>
+                    <section class="modal-window" data-id="modal1">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>NewayJapan様<br class="new_line">HPの保守運用</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>Google Maps JavaScript APIを使用して制作したものになります。
+                                        検索画面にて、都道府県を選択後に、市町村やブランﾄﾞを指定し、AND検索をかけ、
+                                        検索結果に出た店舗のMAPピンを表示するものとなっております。
+                                    </p>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://www.newayjapan.com/shoplocation.html"><span>LINK</span></a>
+                                    </div>
+                                    <!--<div class="icons"><img src="../img//movie.png" alt=""><a
+                                            href=""><span>MOVIE</span></a></div>-->
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/new_japan/search1.png"></li>
+                                    <li><img src="../img/new_japan/search2.png"></li>
+                                    <li><img src="../img/new_japan/search3.png"></li>
+                                </ul>
+                                <div class="main_img"><img src="../img/new_japan/search1.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="modal-window" data-id="modal2">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>NewayJapan様<br class="new_line">HPの保守運用</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>もう一度ご依頼があり、企業・営業向けの方へのお問い合わせフォームの作成をさせていただきました。バリデーションもしっかり入っております。
+                                    </p>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://www.newayjapan.com/contact.html"><span>LINK</span></a></div>
+                                    <!--<div class="icons"><img src="../img//movie.png" alt=""><a
+                                            href=""><span>MOVIE</span></a></div>-->
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/new_japan/inquiry1.png"></li>
+                                    <li><img src="../img/new_japan/inquiry2.png"></li>
+                                    <li><img src="../img/new_japan/inquiry3.png"></li>
+
+                                </ul>
+                                <div class="main_img"><img src="../img/new_japan/inquiry1.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="modal-window" data-id="modal3">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>AkrosAkademy様<br class="new_line">システム実装</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>今回は生徒管理システムを作成させていただきました。
+                                        お問い合わせフォームから生徒入学後の講義スケジュール管理までを作成いたしました。
+                                        今後も、保守運用を任せていただけるとのことで、本当にこのご縁に感謝しております。
+
+                                    </p>
+                                    <!--<div class="icons"><img src="../img/link.png" alt=""><a
+                                            href=""><span>LINK</span></a></div>-->
+                                    <!--<div class="icons"><img src="../img//movie.png" alt=""><a
+                                            href=""><span>MOVIE</span></a></div>-->
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/akross/login.png"></li>
+                                    <li><img src="../img/akross/admin_all.png"></li>
+                                    <li><img src="../img/akross/admin_register.png"></li>
+                                    <li><img src="../img/akross/admin_edit.png"></li>
+                                    <li><img src="../img/akross/teacher_all.png"></li>
+                                    <li><img src="../img/akross/teacher_register.png"></li>
+                                    <li><img src="../img/akross/mentenance.png"></li>
+                                    <li><img src="../img/akross/otoiawase_register.png"></li>
+                                    <li><img src="../img/akross/otoiawase_edit.png"></li>
+                                    <li><img src="../img/akross/otoiawase_all.png"></li>
+                                    <li><img src="../img/akross/couseling_register.png"></li>
+                                    <li><img src="../img/akross/counseling_teiann.png"></li>
+                                    <li><img src="../img/akross/cou_pdf.png"></li>
+                                    <li><img src="../img/akross/student_all.png"></li>
+                                    <li><img src="../img/akross/student_register.png"></li>
+                                    <li><img src="../img/akross/attndqnce.png"></li>
+                                    <li><img src="../img/akross/attendance_result.png"></li>
+                                    <li><img src="../img/akross/curremt.png"></li>
+                                    <li><img src="../img/akross/current_edit.png"></li>
+                                </ul>
+                                <div class="main_img"><img src="../img/akross/login.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+            <!--ポートフォリオ-->
+            <section class="portfolio_section" id="portfolio">
+                <div class="work_section_detail">
+                    <h2 class="effect-fade">Portfolio</h2>
+                    <div class="work_section_detail__flex effect-fade">
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="4"><img src="../img/shopsite/user/shopping_gamen.png"
+                                    alt=""><br><span>Shopping site</span></a>
+                        </div>
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="5"><img src="../img/rese/user/homereview.png"
+                                    alt=""><br><span>予約システム</span></a>
+                        </div>
+                        <div class="work_section_detail__flex--screen__img">
+                            <a class="js-open" data-id="6"><img src="../img/blog/top.png"
+                                    alt=""><br><span>ブログ</span></a>
+                        </div>
+                    </div>
+                    <div id="overlay" class="overlay"></div>
+                    <section class="modal-window" data-id="modal4">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>Shoping site</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>今回は、Laravelを使用してECサイトを作成しました。
+                                        マルチ対応ログインとなっており、Stripeを使用しての決済もできるようになっております。
+                                        今後は、環境面で、ストレージをS3、バックエンドをEC2、データベースをRDSとして環境を構築する予定です。
+                                    </p>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://github.com/Izwa-Akemi/shop-site"><span>Github</span></a></div>
+                                    <!--<div class="icons"><img src="../img//movie.png" alt=""><a
+                                            href=""><span>MOVIE</span></a></div>-->
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/shopsite/owner/login.png"></li>
+                                    <li><img src="../img/shopsite/owner/syouhin_kanri.png"></li>
+                                    <li><img src="../img/shopsite/owner/syouhin_new_register.png"></li>
+                                    <li><img src="../img/shopsite/owner/gazou_kanri.png"></li>
+                                    <li><img src="../img/shopsite/owner/tenpo.png"></li>
+                                    <li><img src="../img/shopsite/owner/tenpo_edit.png"></li>
+                                    <li><img src="../img/shopsite/admin/admin_login.png"></li>
+                                    <li><img src="../img/shopsite/admin/owner_all.png"></li>
+                                    <li><img src="../img/shopsite/admin/owner_new.png"></li>
+                                    <li><img src="../img/shopsite/admin/owner_edit.png"></li>
+                                    <li><img src="../img/shopsite/admin/kigen_owner.png"></li>
+                                    <li><img src="../img/shopsite/user/user_login.png"></li>
+                                    <li><img src="../img/shopsite/user/shopping_gamen.png"></li>
+                                    <li><img src="../img/shopsite/user/syouhin_detail.png"></li>
+                                    <li><img src="../img/shopsite/user/mise_detail.png"></li>
+                                    <li><img src="../img/shopsite/user/cart_inner.png"></li>
+                                    <li><img src="../img/shopsite/user/stripe.png"></li>
+                                </ul>
+                                <div class="main_img"><img src="../img/shopsite/owner/login.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="modal-window" data-id="modal5">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>予約システム</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>企業のグループ会社の飲食店予約システムというのをコンセプトに作成しました。
+                                       詳細は「設計書」を御覧いただけますと幸いです。
+                                       今後のは、予定としてCircle CIを使ってデプロイとテストの自動化を行うことができるようにしたいと思います！
+                                    </p>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://github.com/Izwa-Akemi/rese"><span>Github</span></a></div>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://docs.google.com/spreadsheets/d/1DSuATBRuoCnaXyv7dG6LCX25WkAAnqF5KE1q7nM26IY/edit?usp=sharing"><span>設計書</span></a>
+                                    </div>
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/rese/user/home.png"></li>
+                                    <li><img src="../img/rese/user/mypage.png"></li>
+                                    <li><img src="../img/rese/user/review_register.png"></li>
+                                    <li><img src="../img/rese/user/homereview.png"></li>
+                                    <li><img src="../img/rese/user/apoint.png"></li>
+                                    <li><img src="../img/rese/user/apoint_finish.png"></li>
+                                    <li><img src="../img/rese/user/user_register.png"></li>
+                                    <li><img src="../img/rese/user/user_finish.png"></li>
+                                    <li><img src="../img/rese/owner/owner_login.png"></li>
+                                    <li><img src="../img/rese/owner/shop_kanri.png"></li>
+                                    <li><img src="../img/rese/owner/shop_edit.png"></li>
+                                    <li><img src="../img/rese/admin/admin_login.png"></li>
+                                    <li><img src="../img/rese/admin/admin_all.png"></li>
+                                    <li><img src="../img/rese/admin/owner_register.png"></li>
+                                    <li><img src="../img/rese/admin/kigen_owner.png"></li>
+                                </ul>
+                                <div class="main_img"><img src="../img/rese/user/home.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="modal-window" data-id="modal6">
+                        <div class="modal_content_flex">
+                            <div class="modal_content_flex__detail">
+                                <h2>ブログ</h2>
+                                <div class="modal_content_flex__detail--message">
+                                    <p>あんぽんたんの技術ブログを作成しました。
+                                        このブログの目標は、「未経験者でもこのブログを見れば、理解をしながらソースコードを書けるようになる！」です！
+                                        WordPressの完全オリジナルテーマで作成してます。デザインは、まだまだかもしれませんが、もっと見やすく、UI/UXをもっと意識して改善できるように頑張りたいと思います！
+                                    </p>
+                                    <div class="icons"><img src="../img/link.png" alt=""><a
+                                            href="https://anpontan-blog.com/"><span>LINK</span></a></div>
+                                    <!--<div class="icons"><img src="../img//movie.png" alt=""><a
+                                            href=""><span>MOVIE</span></a></div>-->
+                                </div>
+                                <h2>使用言語など</h2>
+                                <ul class="modal_content_flex__detail_list">
+                                    <li>HTML5/CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>PHP</li>
+                                    <li>WordPress</li>
+                                </ul>
+                            </div>
+                            <div class="modal_content_flex__slide">
+                                <ul class="image_list">
+                                    <li><img src="../img/blog/top.png"></li>
+                                    <li><img src="../img/blog/middle.png"></li>
+                                    <li><img src="../img/blog/low.png"></li>
+                                    <li><img src="../img/blog/footer.png"></li>
+                                    <li><img src="../img/blog/news.png"></li>
+                                    <li><img src="../img/blog/tech.png"></li>
+                                    <li><img src="../img/blog/mokuzi.png"></li>
+                                    <li><img src="../img/blog/inquiry.png"></li>
+                                </ul>
+                                <div class="main_img"><img src="../img/blog/top.png"></div>
+                                <div class="closed">
+                                    <button class="js-close button-close">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+            <section class="my_skill_section" id="my_skill_set">
+                <div class="my_skill_section_detail">
+                    <h2>My Skill Set</h2>
+                    <div class="graph_list effect-fade">
+                        <div class="graph_list_item">
+                            <canvas id="graph_1"></canvas>
+                            <ul>
+                                <li>1:学習中</li>
+                                <li>2:基本的なことを理解している</li>
+                                <li>3:調べながら業務を遂行できる</li>
+                                <li>4:現場で使用したことがある</li>
+                                <li>5:人に教えられる</li>
+                            </ul>
+                        </div>
+                        <div class="graph_list_item">
+                            <canvas id="graph_2"></canvas>
+                            <ul>
+                                <li>1:学習中</li>
+                                <li>2:基本的なことを理解している</li>
+                                <li>3:調べながら業務を遂行できる</li>
+                                <li>4:現場で使用したことがある</li>
+                                <li>5:人に教えられる</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="profile_section" id="profile">
+                <div class="profile_section_detail">
+                    <h2>Profile</h2>
+                    <div class="profile-content">
+                        <div class="month effect-fade">2013年4月～<br>大学時代</div>
+                        <div class="profile-content__detail effect-fade">
+                            <div class="profile-content__img">
+                                <img src="../img/history/medison.jpg" alt="">
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">薬学部へ入学</p>
+                                <p class="profile-content__message_text">
+                                    教育及び有機化学を専門に学ぶ。卒業研究において使用した、特殊なソフトやLinuxを触ったことによりIT部門にも興味を持つ。
+                                    研究内容は<a href="http://nenkai.pharm.or.jp/138/pc/ipdfview.asp?i=2660">こちらをクリック</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month effect-fade">2019年4月～<br>社会人編</div>
+                        <div class="profile-content__detail effect-fade">
+                            <div class="profile-content__img">
+                                <img src="../img/history/teacher.jpg" alt="">
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">塾へ入社</p>
+                                <p class="profile-content__message_text">
+                                    薬学実習において、薬剤師の仕事に疑問を抱き、興味を持っていた「エンジニア」か「教員」かで迷った末に、コミュニケーションスキルを身に着けたいと考え、講師として塾に入社。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month effect-fade">2019年11月～</div>
+                        <div class="profile-content__detail effect-fade">
+                            <div class="profile-content__img">
+                                <img src="../img/history/engneer.jpg" alt="">
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">ITエンジニアを目指す</p>
+                                <p class="profile-content__message_text">
+                                    塾が倒産してしまい、もう一度塾講師も考えたが、「少子高齢化」と「IT化による映像授業」で講師の需要が減る可能性を考え、興味を持っていた「ITエンジニア」になることを決意
+                                </p>
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">IT企業へ入社</p>
+                                <p class="profile-content__message_text">
+                                    未経験からフロントエンドの言語を学べる研修があると同時に、コミュニケーション研修として、家電量販店や携帯ショップで販売員として働く。
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month effect-fade">2020年3月～</div>
+                        <div class="profile-content__detail effect-fade">
+                            <div class="profile-content__img">
+                                <img src="../img/history/korona.jpg" alt="">
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">コロナの災い</p>
+                                <p class="profile-content__message_text">コロナショックにより、派遣先が切られてしまい待機となってしまった。
+                                    いつ終わるのかもわからないので、「ITスクルール」に入学。バックエンドの「JAVA」を中心にスキルを磨くことが出来た！
+                                </p>
+                            </div>
+                        </div>
+                        <div class="month effect-fade">2019年7月～</div>
+                        <div class="profile-content__detail">
+                            <div class="profile-content__img">
+                                <img src="../img/history/ses.jpg" alt="">
+                            </div>
+                            <div class="profile-content__message">
+                                <div class="profile-content__message_tape"> </div>
+                                <p class="profile-content__message_title">SES企業入社</p>
+                                <p class="profile-content__message_text">
+                                    「システムエンジニア」としてスキルアップしたいと考え、SES企業に入社。社内でのホームページの更新やWEBアプリの開発、客先にて、テスト業務やCMSを使用してHPの更新を行った。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="last_message effect-fade">
+                        <h2>最後に</h2>
+                        <p>ここまで御覧くださり、誠にありがとうございます。<br>
+                            様々な業務に携わる中で、「エンジニア」として、「人として」多くの体験をさせていただきました。これからも、より多くの体験をして成長できるように、日々進化している技術をキャッチアップし、私自身の成長がクライアント様の悩みや解決につながることをねっがています。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            <small>&copy; 2022 Izawa</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/graph_1.js"></script>
+    <script src="../js/graph_2.js"></script>
+</body>
+
+</html>

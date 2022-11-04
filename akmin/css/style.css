@@ -1,0 +1,1571 @@
+/*========= 共通設定CSS ===============*/
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+main {
+    margin-top: 6rem;
+}
+
+
+/*========= ヘッダーのCSS ===============*/
+header {
+    background-color: rgba(255, 255, 255, .7);
+    height: 6rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    border-bottom: 1px solid black;
+}
+
+/*ヘッダーの幅を綺麗にそろえるために要素の大きさを均一にする*/
+.logo, .menu-contents {
+    width: 4rem;
+}
+
+.pc {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.logo img {
+    width: 5.1rem;
+    height: 3.71rem;
+}
+
+/*ボタン外側*/
+.menu-toggle_btn {
+    position: relative;
+    /*ボタン内側の基点となるためrelativeを指定*/
+
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+}
+
+/*ボタン内側*/
+.menu-toggle_btn span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 1rem;
+    height: 3px;
+    border-radius: 2px;
+    background: #EC6015;
+    width: 45%;
+}
+
+.menu-toggle_btn span:nth-of-type(1) {
+    top: 1.5rem;
+}
+
+.menu-toggle_btn span:nth-of-type(2) {
+    top: 2rem;
+}
+
+.menu-toggle_btn span:nth-of-type(3) {
+    top: 2.5rem;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.menu-toggle_btn.active span:nth-of-type(1) {
+    top: 1.5rem;
+    left: 1.5rem;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+    z-index: 1;
+}
+
+.menu-toggle_btn.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+    z-index: 1;
+}
+
+.menu-toggle_btn.active span:nth-of-type(3) {
+    top: 2.25rem;
+    left: 1.5rem;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+    z-index: 1;
+}
+
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.menu-inner {
+    display: none;
+}
+
+.menu-inner.active {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 1;
+}
+
+.menu__item {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.menu__item a {
+    background-color: #EC6015;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    color: #fff;
+    font-family: Kiwi Maru;
+    text-align: center;
+    text-decoration: none;
+    width: 10rem;
+}
+.menu__item a:hover {
+    background-color: #ffefcc;
+    color: black;
+}
+
+/*-------------------------------------------------------*/
+/*-----------------------------------------------------
+      メインの設定
+-------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+.main-inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*-----------------任天堂スイッチ-------------------------*/
+.opening_section {
+    background-color: #ffefcc;
+    position: relative;
+}
+
+.opening_section_text {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    margin-bottom: 4rem;
+}
+
+.opening_section_message {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.opening_section_message p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EC6015;
+    font-family: Kiwi Maru;
+}
+
+:root {
+    /* COLORS */
+    --blue: #3cc2ef;
+    --red: #ed6077;
+    --grey: #666b80;
+    --black: #402f44;
+    --white: #fff;
+    --transp-black: rgba(0, 0, 0, 0.1);
+    /*  Stroke  */
+    --stroke: 4px solid #402f44;
+}
+
+.nintendo-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.actions {
+    width: 100px;
+    height: 270px;
+    border-radius: 50px 0 0 50px;
+    border: var(--stroke);
+    text-align: center;
+    position: relative;
+    box-shadow: inset -20px 0 var(--transp-black), inset 10px 0 rgba(255, 255, 255, 0.2), inset 4px 4px rgba(255, 255, 255, 0.5);
+}
+
+.analogic {
+    width: 25px;
+    height: 25px;
+    background-color: var(--grey);
+    border-radius: 50%;
+    border: var(--stroke);
+    transform: translatex(50%);
+    position: relative;
+    margin: 30px 0 15px;
+    left: -2px;
+}
+
+.analogic:after, .analogic:before {
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    width: 100%;
+}
+
+.analogic:before {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.analogic:after {
+    height: 100%;
+    width: 4px;
+    margin-left: -2px;
+}
+
+.center-circle {
+    background-color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    box-shadow: inset -5px 0 var(--transp-black), inset 6px 0 rgba(255, 255, 255, 0.2), inset 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.actions.left {
+    background-color: var(--blue);
+}
+
+.actions.right {
+    background-color: var(--red);
+    border-radius: 0 50px 50px 0;
+}
+
+.actions.right .analogic {
+    top: 82px;
+}
+
+.actions.right .buttons {
+    top: -66px;
+}
+
+.buttons {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.buttons button {
+    border: var(--stroke);
+    background-color: var(--grey);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    color: var(--black);
+    font-size: 12px;
+    position: absolute;
+    box-shadow: inset -3px 0 var(--transp-black);
+}
+
+.buttons button:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--black);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.buttons button:nth-child(1) {
+    left: 0;
+    top: 20px;
+    transform: rotate(-90deg);
+    display: none;
+}
+
+.buttons button:nth-child(2) {
+    top: 0;
+    left: 50%;
+    margin-left: -13px;
+    animation: blindText 0.4s ease infinite;
+    animation-direction: alternate;
+}
+
+.buttons button:nth-child(3) {
+    right: 0;
+    top: 20px;
+    transform: rotate(90deg);
+    display: none;
+}
+
+.buttons button:nth-child(4) {
+    top: 40px;
+    left: 50%;
+    margin-left: -13px;
+    animation: blindText 0.4s ease infinite;
+    animation-direction: alternate;
+
+}
+
+.buttons button.under_button {
+    border: var(--stroke);
+    background-color: var(--grey);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    color: var(--black);
+    font-size: 12px;
+    position: absolute;
+    box-shadow: inset -3px 0 var(--transp-black);
+}
+
+.buttons button.under_button:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--black);
+    border-bottom: 0px solid var(--black);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/*-------右側のスティックボタン------------*/
+.buttons-right {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.buttons-right button {
+    border: var(--stroke);
+    background-color: var(--grey);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: var(--white);
+    font-size: 12px;
+    position: absolute;
+    box-shadow: inset -3px 0 var(--transp-black);
+    animation: blindText 0.4s ease infinite;
+    animation-direction: alternate;
+}
+
+.buttons-right button:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--black);
+    position: absolute;
+}
+
+.buttons-right button:nth-child(1) {
+    left: 0px;
+    top: -35px;
+}
+
+/*----------------------------------------*/
+.circle, .square {
+    border: var(--stroke);
+    background-color: var(--grey);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+
+}
+
+.circle {
+    border-radius: 50%;
+    left: 15px;
+    right: auto;
+}
+
+
+.minus, .plus {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--black);
+    position: absolute;
+    top: 10px;
+    text-shadow: 0 2px rgba(255, 255, 255, 0.3)
+}
+
+.minus {
+    right: 10px;
+}
+
+.plus {
+    left: 10px;
+}
+
+.middle {
+    padding: 6px 10px;
+    background-color: var(--grey);
+    border-top: var(--stroke);
+    border-bottom: var(--stroke);
+    /*   min-width: 150px; */
+    box-shadow: inset 0 0 50px var(--black);
+    overflow: hidden;
+    width: 300px;
+}
+
+.screen {
+    border: 10px solid var(--black);
+    background-color: var(--grey);
+    border-radius: 5px;
+    width: 100%;
+    height: 236px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.screen span {
+    font-family: "Arial";
+    color: var(--black);
+    font-size: 1.2em;
+    position: relative;
+    opacity: 1;
+    top: 0;
+    text-align: center;
+    line-height: 1.3rem;
+    z-index: 9;
+    font-weight: bold;
+    padding-top: 1rem;
+
+}
+
+.screen ul {
+    margin-left: 0.5rem;
+    list-style: circle;
+}
+
+.screen ul>li {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: left;
+    color: var(--white);
+}
+.screen ul>li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: left;
+    color: var(--white);
+    font-family: Kiwi Maru;
+}
+
+.game-start-screen__img {
+    display: none;
+}
+.red{
+    color:red;
+}
+/*-----------アニメーション------------*/
+@keyframes blindText {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+/*-------------------------------------------------------*/
+/*-----------------ABOUT-------------------------*/
+.about_section {
+    background-image: url(../img/back_white.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+.about_section_detail {
+    width: 95%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+}
+
+.about_section_detail h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.about_section_detail p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+/*-------------------------------------------------------*/
+/*-----------------ABOUT_ME-------------------------*/
+.about_me_section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_me_section_detail {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.about_me_section_detail h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: Kiwi Maru;
+}
+
+.about_me_section_detail__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 0.5rem;
+}
+
+.about_me_section_detail__img img {
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 1rem;
+    background-color: #ffefcc;
+}
+
+.about_me_section_detail__message {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    padding: 0.5rem;
+    width: 70%;
+    font-family: Kiwi Maru;
+}
+
+/*-------------------------------------------------------*/
+/*-----------------WORK-------------------------*/
+.work_section {
+    background-image: url(../img/back_white.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.work_section_detail {
+    width: 95%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.work_section_detail h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: Kiwi Maru;
+}
+
+.work_section_detail__flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem 0.5rem;
+    text-align: center;
+}
+
+.work_section_detail__flex--screen__img {
+    width: 80%;
+    margin: 0 auto;
+}
+/*-----------アニメーション------------*/
+
+.work_section_detail__flex--screen__img:hover{
+    transform: scale(1.15);
+    animation: blindText 1s ease;
+    animation-direction: alternate;
+}
+.work_section_detail__flex--screen__img img {
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    margin-bottom: 1.3rem;
+    width: 80%;  
+}
+
+.work_section_detail__flex--screen__img span {
+    color: #594A4E;
+}
+.work_section_detail__flex--screen__img span:hover {
+    color: #ea755b;
+}
+
+/*------モーダルのデザイン-------------------*/
+/*========= モーダル表示のためのCSS ===============*/
+/* モーダルウィンドウ */
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 95%;
+    max-height: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 11;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.no_scroll {
+    overflow: hidden;
+}
+
+/* 閉じるボタン */
+.closed {
+    width: 100%;
+    text-align: center;
+}
+
+.button-close {
+    background: #EC6015;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-family: Kiwi Maru;
+}
+.button-close:hover {
+    background: #ffefcc;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    border: none;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
+
+/*------------モーダルウィンドウ内デザイン------*/
+.modal_content_flex__detail h2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: Kiwi Maru;
+}
+
+/*----------タイトル----------------*/
+.modal_content_flex__detail h2:before, .modal_content_flex__detail h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 18%;
+    height: 2px;
+    border-top: solid 1px black;
+}
+
+.modal_content_flex__detail h2:before {
+    left: 0;
+}
+
+.modal_content_flex__detail h2:after {
+    right: 0;
+}
+
+/*---------------------------------------------*/
+/*------------------仕様説明---------------*/
+.modal_content_flex__detail--message {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-family: Kiwi Maru;
+}
+
+/*------------------アイコン---------------*/
+.icons {
+    margin: 1rem 0;
+}
+
+.icons img {
+    width: 16px;
+    height: 16px;
+}
+.icons img:hover{
+    color: blue;  
+}
+.icons span {
+    color: #3cc2ef;
+    padding-left: 0.5rem;
+}
+.icons span:hover{
+    color: blue;  
+}
+/*------------------言語等---------------*/
+.modal_content_flex__detail_list {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+/*-------------------------------------------------------*/
+/*------------------スライド---------------*/
+.image_list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem 0.5rem;
+    flex-wrap: wrap;
+}
+
+.image_list li {
+    width: 30%;
+}
+
+.image_list img {
+    cursor: pointer;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+
+.select {
+    border: 1px solid #3b3134;
+    transform: scale(1.12);
+}
+
+.main_img {
+    margin: 2rem 0;
+}
+
+.main_img img {
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+/*-------------------------------------------------------*/
+/*-----ポートフォリオ--------*/
+.portfolio_section {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+/*-------------------------------------------------------*/
+/*-----------------スキル-------------------------*/
+.my_skill_section {
+    background-image: url(../img/back_white.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+.my_skill_section_detail {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.my_skill_section_detail h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: bold;
+    font-family: Kiwi Maru;
+}
+
+.graph_list_item {
+    background-color: #fff;
+    padding-bottom: 1rem;
+    width: 90%;
+    min-height: 300px;
+    margin: 1rem auto;
+    font-family: Kiwi Maru;
+}
+
+.graph_list_item ul {
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.graph_list_item li {
+    padding: 0.5rem 0.5rem;
+}
+
+#graph_1 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#graph_2 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/*-------------------------------------------------------*/
+/*-----------------プロフィール-------------------------*/
+.profile_section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+}
+
+.profile_section_detail {
+    width: 95%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+}
+
+.profile_section_detail h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: Kiwi Maru;
+}
+
+/*---------年表---------------------*/
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    font-family: Kiwi Maru;
+}
+
+.profile-content .month {
+    text-align: left;
+    width: 8em;
+    padding: 0.5em 1.0em 0.5em 0.5em;
+    position: relative;
+    top: 80px;
+}
+
+.profile-content .month::after {
+    content: '';
+    position: absolute;
+    right: -2.5em;
+    top: 10px;
+    width: 30%;
+    height: 7px;
+    background-color: #EC6015;
+}
+
+.profile-content .profile-content__detail {
+    width: calc(100% - 8em);
+    padding: 0.5em 2.0em 3.0em;
+    border-left: 7px solid #EC6015;
+}
+
+/*------吹き出し画像-----------*/
+.profile-content__img img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 7px solid #EC6015;
+    box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+/*------年表説明-----------*/
+.profile-content__message {
+    width: 160px;
+    /* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 1rem 0;
+    background: #ffefcc;
+    /* 紙の色 */
+    color: #000;
+    /* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+    word-break: break-all;
+}
+
+.profile-content__message_tape {
+    width: 50%;
+    height: 35px;
+    margin: -25px auto 0;
+    background: #989898;
+    transform: rotate(-3deg);
+    opacity: 0.1;
+}
+
+.profile-content__message_title {
+
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-content__message_text {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    line-height: 1.2rem;
+}
+
+.profile-content__message_text a {
+    color: #EC6015;
+    border-bottom: 1px solid #EC6015;
+}
+
+.profile-content__message_text a:hover {
+    color: blue;
+    font-weight: bold;
+    border-bottom: 1px solid blue;
+}
+
+/*-------------最後に-----------------*/
+.last_message {
+    font-family: Kiwi Maru;
+    margin: 4rem 0;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    padding: 1em 1.5em;
+    background-color: #fff4ea;
+    /*背景色*/
+    box-shadow: 0 0 0 8px #fff4ea;
+    /*背景色外側*/
+    border: 2px dashed #EC6015;
+    /*線*/
+    border-radius: 8px;
+    /*角の丸み*/
+    color: #000000;
+    /*文字色*/
+}
+
+/*------------------------------------------------------------*/
+/*-----------------------------フッター---------------------------*/
+footer {
+    background-color: #EC6015;
+    padding: 3rem 0
+}
+
+footer div {
+    text-align: center;
+    color: #fff;
+
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------
+              レスポンシブ対応
+---------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+
+    /*-----------------ヘッダー-----------------*/
+    .pc {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .pc-inner {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    .pc-logo {
+        display: flex;
+        text-align: center;
+        gap: 0 10px;
+        align-items: center;
+    }
+
+    .pc-logo img {
+        width: 6.25rem;
+        height: 5rem;
+    }
+
+    .pc-logo a:hover {
+        line-height: 1.2rem;
+        color: #ffefcc;
+        font-family: Kiwi Maru;
+    }
+    .pc-list {
+        display: flex;
+        align-items: center;
+        gap: 0 1.5rem;
+    }
+
+    .pc-list a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #594A4E;
+        font-family: Kiwi Maru;
+    }
+    .pc-list a:hover {
+        color: #EC6015;
+    }
+
+    /*-------------------------------------------*/
+    /*-----------------任天堂スイッチ-------------------------*/
+    .opening_section {
+        background-color: #ffefcc;
+        position: relative;
+    }
+
+    .opening_section_text {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+    }
+
+    .opening_section_message {
+        max-width: 800px;
+    }
+
+    .opening_section_message p {
+        font-size: 2rem;
+    }
+
+    .nintendo-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+
+    .middle {
+      
+        width:400px;
+     
+    }
+
+   
+    .game-start-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0 5px;
+    }
+
+    .game-start-screen__img {
+        display: block;
+        width:40%;
+        background-color:white;
+    }
+
+    /*-------------------------------------------------------*/
+    /*-----------------ABOUT-------------------------*/
+
+    .about_section_detail {
+        max-width: 800px;
+    }
+
+    .about_section_detail h2 {
+        font-size: 2rem;
+    }
+
+    .about_section_detail p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    /*-------------------------------------------------------*/
+    /*-----------------ABOUT_ME-------------------------*/
+
+    .about_me_section_detail {
+        max-width: 800px;
+    }
+
+    .about_me_section_detail h2 {
+        font-size: 2rem;
+    }
+
+    .about_me_section_detail__flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0 0.5rem;
+    }
+
+    .about_me_section_detail__img img {
+        display: block;
+        text-align: center;
+        width: 200px;
+        margin-bottom: 1rem;
+        background-color: #ffefcc;
+    }
+
+    .about_me_section_detail__message {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        width: 70%;
+    }
+
+    /*-------------------------------------------------------*/
+    /*-----------------WORK-------------------------*/
+    .work_section_detail {
+        max-width: 800px;
+    }
+
+    .work_section_detail h2 {
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+
+    .work_section_detail__flex--screen__img {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    .work_section_detail__flex--screen__img img {
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        margin-bottom: 1.3rem;
+        width: 100%;
+    }
+
+    .work_section_detail__flex--screen__img span {
+        color: #594A4E;
+        font-size: 1.3rem;
+    }
+
+    /*------モーダルのデザイン-------------------*/
+    /*========= モーダル表示のためのCSS ===============*/
+    /* モーダルウィンドウ */
+    .modal-window {
+        display: none;
+        position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 1rem;
+        box-sizing: border-box;
+        max-width: 800px;
+        max-height: 80%;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: 11;
+        padding: 2rem;
+        overflow-y: auto;
+    }
+
+    /* 閉じるボタン */
+    .closed {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-close {
+        background: #EC6015;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+
+
+    /*------------モーダルウィンドウ内デザイン------*/
+    .modal_content_flex__detail h2 {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .modal_content_flex {
+        display: flex;
+        justify-content: center;
+        gap: 0 1rem;
+    }
+
+    .modal_content_flex__detail {
+        width: 50%;
+    }
+
+    .modal_content_flex__slide {
+        width: 50%;
+    }
+
+    /*----------タイトル----------------*/
+
+    .modal_content_flex__detail h2:before, .modal_content_flex__detail h2:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 12%;
+        height: 2px;
+        border-top: solid 1px black;
+    }
+
+    .modal_content_flex__detail h2:before {
+        left: 0;
+    }
+
+    .modal_content_flex__detail h2:after {
+        right: 0;
+    }
+
+    /*---------------------------------------------*/
+    /*------------------仕様説明---------------*/
+    .modal_content_flex__detail--message {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    /*------------------アイコン---------------*/
+    .icons {
+        margin: 1rem 0;
+    }
+
+    .icons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icons span {
+        color: #3cc2ef;
+        padding-left: 0.5rem;
+    }
+
+    /*------------------言語等---------------*/
+    .modal_content_flex__detail_list {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+
+    /*-------------------------------------------------------*/
+    /*------------------スライド---------------*/
+    .image_list {
+        display: flex;
+        justify-content: center;
+        gap: 1rem 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .image_list li {
+        width: 30%;
+    }
+
+    .image_list img {
+        cursor: pointer;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    }
+
+    .select {
+        border: 1px solid #3b3134;
+        transform: scale(1.12);
+    }
+
+    .main_img {
+        margin: 2rem 0;
+    }
+
+    .main_img img {
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    }
+
+    /*-------------------------------------------------------*/
+
+
+
+    /*-------------------------------------------------------*/
+    /*-----------------スキル-------------------------*/
+
+    .my_skill_section_detail {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .my_skill_section_detail h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+        padding: 2rem 0;
+    }
+
+    .graph_list {
+        display: flex;
+        justify-content: center;
+        gap: 0 0.5rem;
+    }
+
+    .graph_list_item {
+
+        padding: 1rem;
+        width: 360px;
+
+    }
+
+
+    #graph_1 {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #graph_2 {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+    /*-------------------------------------------------------*/
+    /*-----------------プロフィール-------------------------*/
+    .profile_section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+    }
+
+    .profile_section_detail {
+        max-width: 800px;
+    }
+
+    .profile_section_detail h2 {
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+
+    /*---------年表---------------------*/
+    .profile-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .profile-content .month {
+        text-align: left;
+        width: 10em;
+        padding: 0.5em 1.0em 0.5em 0.5em;
+        position: relative;
+        top: 80px;
+        font-size: 1.3rem;
+    }
+
+    .profile-content .month::after {
+        content: '';
+        position: absolute;
+        right: -2.3em;
+        top: 10px;
+        width: 20%;
+        height: 7px;
+        background-color: #EC6015;
+    }
+
+    .profile-content .profile-content__detail {
+        width: calc(100% - 13em);
+        padding: 0.5em 2.0em 3.0em;
+        border-left: 7px solid #EC6015;
+    }
+
+    /*------吹き出し画像-----------*/
+    .profile-content__img img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border: 7px solid #EC6015;
+        box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
+    }
+
+    /*------年表説明-----------*/
+    .profile-content__message {
+        width: 250px;
+        /* 紙の横幅 100%にすると全幅表示に */
+        padding: 15px;
+        margin: 1.5rem 0;
+        background: #ffefcc;
+        /* 紙の色 */
+        color: #000;
+        /* 文字色 */
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+        word-break: break-all;
+    }
+
+    .profile-content__message_tape {
+        width: 50%;
+        height: 35px;
+        margin: -25px auto 0;
+        background: #989898;
+        transform: rotate(-3deg);
+        opacity: 0.1;
+    }
+
+    .profile-content__message_title {
+
+        text-align: center;
+        font-size: 1.6em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .profile-content__message_text {
+        display: block;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+        line-height: 1.7rem;
+    }
+
+    .profile-content__message_text a {
+        color: #EC6015;
+        border-bottom: 1px solid #EC6015;
+    }
+
+    .profile-content__message_text a:hover {
+        color: blue;
+        font-weight: bold;
+        border-bottom: 1px solid blue;
+    }
+
+    /*-------------最後に-----------------*/
+    .last_message {
+        margin: 4rem auto;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding: 1em 1.5em;
+        background-color: #fff4ea;
+        /*背景色*/
+        box-shadow: 0 0 0 8px #fff4ea;
+        /*背景色外側*/
+        border: 2px dashed #EC6015;
+        /*線*/
+        border-radius: 8px;
+        /*角の丸み*/
+        color: #000000;
+        /*文字色*/
+        max-width: 800px;
+    }
+
+    /*------------------------------------------------------------*/
+    /*-----------------------------フッター---------------------------*/
+    footer {
+        background-color: #EC6015;
+        padding: 3rem 0
+    }
+
+    footer div {
+        text-align: center;
+        color: #fff;
+
+    }
+
+}
+
+.effect-fade {
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
+  }
+  .effect-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
